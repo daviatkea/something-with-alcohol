@@ -1,0 +1,11 @@
+main {
+  display: grid;
+  /* grid: auto-flow auto / minmax(1rem, 1fr) minmax(0, 50ch) minmax(1rem, 1fr); */
+  grid: auto-flow auto / repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  padding-inline: max(2rem, (100% - 1200px) / 2);
+  gap: 0 2rem;
+}
+
+section {
+  position: relative;
+}

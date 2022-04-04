@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "metamorphous";
+  src: url("metamorphous.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  // font-family: "metamorphous", "Grenze Gotisch";
+  color: #2b2b2b;
+  font-size: clamp(2.25rem, 4vw + 1.3rem, 3.75rem);
+  font-size: clamp(2rem, 2.1vw + 1.5rem, 2.8rem);
+  font-weight: 900;
+  /*letter-spacing: 0.03em;*/
+  line-height: 1.1;
+  hyphens: auto;
+  text-transform: uppercase;
+}
+
+h1 span:first-of-type {
+  display: block;
+  font-size: 0.6em;
+}
+
+.text-gradient {
+  font-family: "Bungee", system-ui;
+  // color: hsl(274deg 88% 60%);
+  background: linear-gradient(to top, #eda44f 50%, transparent 0) 50% 100% /
+      var(--bg-size, 100% 50%) no-repeat,
+    #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1px #86551b;
+  transition: 0.5s cubic-bezier(0.22, 0.03, 0.26, 1);
+  font-size: clamp(3.16rem, 2.89vw + 2.43rem, 4.75rem);
+  display: block;
+}
+
+h1:hover .text-gradient {
+  --bg-size: 100% 200%;
+}

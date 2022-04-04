@@ -1,0 +1,21 @@
+:root {
+  --theme-color: 264 29% 35%;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  color: hsl(249deg 15% 35%);
+
+  background: #fffbfe;
+  -webkit-font-smoothing: antialiased;
+  // background: red;
+}

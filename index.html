@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/index.scss" />
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <h1>
+          <span>The Frontend Elective's list of </span>
+          Something with <span class="text-gradient">alcohol</span>
+        </h1>
+        <p>
+          We categorize our alcohol so you are able to find just what you’re
+          looking for.
+        </p>
+        <a href="#main">Add alcohol</a>
+      </div>
+      <figure class="grid">
+        <img
+          src="https://images.unsplash.com/photo-1589378938275-947b7adf8665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2457&q=80"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1608981618938-d8a334ae9e93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
+          alt=""
+        />
+      </figure>
+    </header>
+
+    <main id="main">
+      <section>
+        <form>
+          <div class="form-group">
+            <label for="name"
+              >Name
+              <span class="hint">Enter beverage name</span>
+            </label>
+            <input id="name" type="text" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="color"
+              >Color
+              <span class="hint">Enter the beverage color</span>
+            </label>
+            <input
+              list="colors"
+              id="color"
+              type="color"
+              name="color"
+              required
+            />
+            <datalist id="colors">
+              <option value="#ffffff"></option>
+              <option value="#e80202"></option>
+              <option value="#fbaf03"></option>
+              <option value="#601208"></option>
+              <option value="#8bf305"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="price"
+              >Price
+              <span class="hint">Enter the price of the beverage</span>
+            </label>
+            <div class="input-group">
+              <input
+                type="number"
+                id="price"
+                pattern="[0-9]"
+                name="price"
+                inputmode="decimal"
+                required
+              />
+              <span>DKK</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="glass_types"
+              >Glass types
+              <span class="hint">Select glass type</span>
+            </label>
+            <input
+              list="glass-types"
+              type="text"
+              id="glass_types"
+              name="glass_types"
+              required
+            />
+
+            <datalist id="glass-types">
+              <option value="Highball Glass"></option>
+              <option value="Martini Glass"></option>
+              <option value="Hurricane Glass"></option>
+              <option value="Irish Coffee Glass"></option>
+              <option value="Brandy Sniffer"></option>
+              <option value="Grappa Glass"></option>
+              <option value="Tulip Glass"></option>
+              <option value="Colins Glass"></option>
+              <option value="Shot Glass"></option>
+              <option value="Rocks Glass"></option>
+              <option value="Old Fashioned Glass"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="category">
+              Category
+              <span class="hint">Enter category</span>
+            </label>
+            <input type="text" id="category" name="category" list="cat" />
+            <datalist id="cat">
+              <option value="Cocktail"></option>
+              <option value="Liquor or Spirits"></option>
+              <option value="Cider"></option>
+              <option value="Wine"></option>
+              <option value="Beer"></option>
+            </datalist>
+          </div>
+
+          <fieldset class="happy-hour">
+            <legend>Happy hour</legend>
+            <span class="hint">Is this drink happy hour eligible?</span>
+            <ul role="list" class="controls">
+              <li>
+                <label for="yes">
+                  <input id="yes" type="radio" name="happy_hour" value="yes" />
+                  Yes
+                </label>
+              </li>
+              <li>
+                <label for="no">
+                  <input
+                    id="no"
+                    type="radio"
+                    name="happy_hour"
+                    value="no"
+                    checked
+                  />
+                  No
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <div class="form-group range">
+            <label for="percentage">Alcohol content (%)</label>
+            <div class="range-wrap">
+              <input
+                type="range"
+                step=".01"
+                min="0"
+                max="1"
+                value=".2"
+                id="percentage"
+                name="percentage"
+              />
+              <datalist id="glass-types">
+                <option value="Highball Glass"></option>
+                <option value="Martini Glass"></option>
+                <option value="Hurricane Glass"></option>
+                <option value="Irish Coffee Glass"></option>
+                <option value="Brandy Sniffer"></option>
+                <option value="Grappa Glass"></option>
+                <option value="Tulip Glass"></option>
+                <option value="Colins Glass"></option>
+                <option value="Shot Glass"></option>
+                <option value="Rocks Glass"></option>
+                <option value="Old Fashioned Glass"></option>
+                <option value="Highball Glass"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ingredients">
+              Ingredients
+              <span class="hint">Enter one ingredient per line</span>
+            </label>
+            <textarea name="ingredients" id="ingredients" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="garnish">
+              Garnish
+              <span class="hint">Enter one per line</span>
+            </label>
+            <textarea name="garnish" id="garnish" required></textarea>
+          </div>
+
+          <button data-add class="btn">Add beverage</button>
+        </form>
+      </section>
+      <div id="cards"></div>
+    </main>
+
+    <!-- <template> -->
+    <article class="card" data-happy-hour="true">
+      <header>
+        <h2>Jonnie's strong drink</h2>
+        <p>Cocktail</p>
+      </header>
+
+      <p class="price"><span data-price>90</span> DKK</p>
+
+      <p>Best served in a <span data-glass>Highball Glass</span>.</p>
+
+      <section>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>Gin</li>
+          <li>Tonic water</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Garnish</h3>
+        <ul>
+          <li>Cucumber</li>
+          <li>Pepper</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Alcohol content</h3>
+        <progress max="100" min="0" value="50">
+          <span data-percentage>50%</span>
+        </progress>
+      </section>
+
+      <div class="action">
+        <button class="delete-btn" data-delete>
+          <span>Delete</span>
+          <svg aria-hidden="true" width="30" height="30">
+            <use href="#delete" />
+          </svg>
+        </button>
+      </div>
+    </article>
+    <!-- </template> -->
+
+    <!-- SVG ICONS -->
+    <svg style="display: none">
+      <symbol
+        id="delete"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <title>Delete button</title>
+        <!-- <circle
+          stroke="var(--circle-stroke, currentColor)"
+          cx="12"
+          cy="12"
+          r="10"
+        ></circle> -->
+        <line
+          stroke="var(--line-stroke, currentColor)"
+          x1="15"
+          y1="9"
+          x2="9"
+          y2="15"
+        ></line>
+        <line
+          stroke="var(--line-stroke, currentColor)"
+          x1="9"
+          y1="9"
+          x2="15"
+          y2="15"
+        ></line>
+      </symbol>
+    </svg>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
